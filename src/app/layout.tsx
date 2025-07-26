@@ -1,9 +1,13 @@
 import './globals.css';
+import NavControlsWrapper from './components/NavControlsWrapper';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <NavControlsWrapper />
+        {children}
+      </body>
     </html>
   );
 }
