@@ -52,16 +52,20 @@ export function Navbar() {
             />
             <Search className="absolute left-2 top-1.5 w-4 h-4 text-gray-500" />
           </div>
-          <div
-            className="bg-orange-500 text-white w-6 h-6 flex items-center justify-center rounded-full font-bold text-sm cursor-pointer"
-            onClick={() => router.push(`/user/${userId}`)}
-          >
-            S
-          </div>
-          <Bell
-            className="w-5 h-5 text-blue-700 cursor-pointer"
-            onClick={() => router.push("/notifications")}
-          />
+          <span title="Profile">
+            <div
+              className="bg-orange-500 text-white w-6 h-6 flex items-center justify-center rounded-full font-bold text-sm cursor-pointer"
+              onClick={() => router.push(`/user/${userId}`)}
+            >
+              S
+            </div>
+          </span>
+          <span title="Notifications">
+            <Bell
+              className="w-5 h-5 text-blue-700 cursor-pointer"
+              onClick={() => router.push("/notifications")}
+            />
+          </span>
         </div>
         {/* Downward Dropdown Menu */}
         {menuOpen && (
